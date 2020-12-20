@@ -1,0 +1,2 @@
+rootProject.name='Cermati.com'
+include ':app'

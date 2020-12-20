@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Cermati.com</string>
+    <string name="hint_search">Search Github User</string>
+    <string name="limit_access"> You have on limit access, please waiting in 30 minutes</string>
+<string name="user_notFound">User Not Found</string>
+    <string name="avatar_url">avatar_url</string>
+    <string name="avatar_name">login</string>
+    <string name="connection">No Internet Connection</string>
+</resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+<androidx.appcompat.widget.Toolbar
+    android:background="@color/colorToolbar"
+    android:layout_width="match_parent"
+    android:padding="12dp"
+    android:layout_height="wrap_content">
+<LinearLayout
+android:background="@drawable/search_box"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<ImageView
+    android:src="@drawable/searchicn"
+
+    android:layout_width="50sp"
+    android:layout_height="match_parent"></ImageView>
+<EditText
+    android:id="@+id/ETsearch"
+    android:hint="@string/hint_search"
+    android:background="@null"
+    android:inputType="textLongMessage"
+    android:layout_weight="1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+</EditText>
+    <ImageView
+        android:id="@+id/Bclose"
+        android:src="@drawable/close"
+android:visibility="invisible"
+        android:layout_width="50sp"
+        android:layout_height="match_parent"></ImageView>
+</LinearLayout>
+</androidx.appcompat.widget.Toolbar>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:id="@+id/swipe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RVusers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+    <com.github.ybq.android.spinkit.SpinKitView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.Large.ThreeBounce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:SpinKit_Color="@color/colorAccent" />
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+<ImageView
+    android:padding="15dp"
+    android:visibility="invisible"
+    android:id="@+id/notFoundImg"
+    android:layout_weight="1"
+    android:src="@drawable/notfounddata"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"></ImageView>
+</LinearLayout>
